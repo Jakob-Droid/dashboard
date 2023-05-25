@@ -1,0 +1,29 @@
+<div class="widget-container">
+    <ng-container
+        class="header"
+        *ngTemplateOutlet="header || defaultHeader"
+    ></ng-container>
+    <ng-container
+        class="body"
+        *ngTemplateOutlet="body || defaultBody"
+    ></ng-container>
+    <ng-container
+        class="footer"
+        *ngTemplateOutlet="footer || defaultFooter"
+    ></ng-container>
+</div>
+
+<ng-template #defaultHeader>
+    <!-- <ngx-widget-header [defaultHeaderOptions]=""></ngx-widget-header> -->
+    <h1>Title</h1>
+</ng-template>
+
+<ng-template #defaultBody>
+    <!-- <ngx-widget-body [defaultBodyOptions]=""></ngx-widget-body> -->
+    <h2>Body</h2>
+</ng-template>
+
+<ng-template #defaultFooter>
+    <!-- <ngx-widget-footer [defaultFooterOptions]=""></ngx-widget-footer> -->
+    <h3>Footer</h3>
+</ng-template>
