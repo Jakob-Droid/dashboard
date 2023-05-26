@@ -11,15 +11,8 @@ import { NumberWidgetComponent } from './widgets/number-widget/number-widget.com
 import { WidgetBaseComponent } from './widgets/widget-base/widget-base.component';
 
 @NgModule({
-    declarations: [
-        WidgetBaseComponent,
-        NumberWidgetComponent,
-        WidgetHeaderComponent,
-        WidgetContainerComponent,
-        WidgetBodyComponent,
-        WidgetFooterComponent,
-    ],
+    declarations: [WidgetBaseComponent, NumberWidgetComponent, WidgetHeaderComponent, WidgetContainerComponent, WidgetBodyComponent, WidgetFooterComponent],
     imports: [CommonModule, DashboardModule, ThemePickerComponent],
-    exports: [DashboardModule],
+    exports: [DashboardModule, WidgetHeaderComponent, WidgetContainerComponent, WidgetBodyComponent, WidgetFooterComponent],
 })
 export class NgxDashboardModule {}

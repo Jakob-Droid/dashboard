@@ -2,14 +2,17 @@ import { WidgetOptionsBase } from 'projects/ngx-dashboard/src/lib/widgets/models
 import { NumberWidgetInputs } from 'projects/ngx-dashboard/src/lib/widgets/number-widget/models/number-widget-inputs.model';
 import { NumberWidgetComponent } from 'projects/ngx-dashboard/src/lib/widgets/number-widget/number-widget.component';
 
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
+
+import { HttpMockWidgetServiceTsService } from './http-mock-widget-service.ts.service';
+import { NewWidgetTypeComponent } from './new-widget-type/new-widget-type.component';
 
 @Component({
     selector: 'app-root',
     templateUrl: './app.component.html',
     styleUrls: ['./app.component.scss'],
 })
-export class AppComponent {
+export class AppComponent implements OnInit {
     widgets: WidgetOptionsBase[] = [
         {
             gridsterOptions: { cols: 2, rows: 1, y: 0, x: 0 },
@@ -29,5 +32,17 @@ export class AppComponent {
             } as NumberWidgetInputs,
             type: NumberWidgetComponent,
         },
+        {
+            gridsterOptions: { cols: 1, rows: 1, y: 2, x: 2 },
+            id: '12345678142548',
+            inputs: {},
+            type: NewWidgetTypeComponent,
+        },
     ];
+
+    constructor(private httpService: HttpMockWidgetServiceTsService) {}
+
+    ngOnInit(): void {
+        console.log(this.httpService.getWidgets());
+    }
 }
