@@ -11,8 +11,6 @@ import { NewWidgetTypeComponent } from './new-widget-type/new-widget-type.compon
     providedIn: 'root',
 })
 export class HttpMockWidgetServiceTsService {
-    constructor() {}
-
     getWidgets(): WidgetOptionsBase[] {
         return [
             {
