@@ -1,12 +1,12 @@
 import { Themes } from './themes.model';
 
 export const ThemeConfig: Themes = {
-    light: {
+    orangy: {
         'color-background': '#fef6e4',
         'color-border': '#8bd3dd',
         'color-text': '#172c66',
     },
-    orangy: {
+    light: {
         'color-background': '#FFFFFF',
         'color-border': '#67568c',
         'color-text': '#1b1425',

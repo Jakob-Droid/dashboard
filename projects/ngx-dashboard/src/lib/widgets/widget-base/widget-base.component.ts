@@ -1,9 +1,8 @@
 import { ChangeDetectionStrategy, Component } from '@angular/core';
 
 @Component({
-    selector: 'ngx-widget-base',
-    templateUrl: './widget-base.component.html',
-    styleUrls: ['./widget-base.component.scss'],
+    selector: '',
+    template: '',
     changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export class WidgetBaseComponent {}

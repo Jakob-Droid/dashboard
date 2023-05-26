@@ -4,6 +4,8 @@ import { NumberWidgetComponent } from 'projects/ngx-dashboard/src/lib/widgets/nu
 
 import { Component } from '@angular/core';
 
+import { NewWidgetTypeComponent } from './new-widget-type/new-widget-type.component';
+
 @Component({
     selector: 'app-root',
     templateUrl: './app.component.html',
@@ -28,6 +30,12 @@ export class AppComponent {
                 title: 'some other title',
             } as NumberWidgetInputs,
             type: NumberWidgetComponent,
+        },
+        {
+            gridsterOptions: { cols: 1, rows: 1, y: 2, x: 2 },
+            id: '12345678142548',
+            inputs: {},
+            type: NewWidgetTypeComponent,
         },
     ];
 }
