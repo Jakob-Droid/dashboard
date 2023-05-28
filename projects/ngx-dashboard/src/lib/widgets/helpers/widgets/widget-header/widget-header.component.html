@@ -1,0 +1,11 @@
+<div class="header-pinned">
+    <ngx-pin-button [isPinned]="isPinned"></ngx-pin-button>
+</div>
+<h1
+    class="header-title drag-action-handler"
+    [ngClass]="{ pinned: isPinned }">
+    {{ title }}
+</h1>
+<div class="header-menu">
+    <ngx-theme-picker></ngx-theme-picker>
+</div>

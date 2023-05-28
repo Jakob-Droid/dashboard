@@ -3,9 +3,15 @@
     name="theme"
     id="theme"
     (change)="onSelectTheme(themeSelector.value)"
->
-    <option default>- select theme -</option>
-    <option *ngFor="let theme of themes | keyvalue" [value]="theme.key">
+    [ngModel]="currentTheme$ | async">
+    <option
+        disabled
+        selected>
+        - select theme -
+    </option>
+    <option
+        *ngFor="let theme of themes | keyvalue"
+        [value]="theme.key">
         {{ theme.key }}
     </option>
 </select>

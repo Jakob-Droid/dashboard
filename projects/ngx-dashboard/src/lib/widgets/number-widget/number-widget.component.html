@@ -1,8 +1,13 @@
 <ngx-widget-container>
     <ng-template #header>
-        <ngx-widget-header [title]="title"></ngx-widget-header>
+        <ngx-widget-header
+            [isPinned]="isPinned$ | async"
+            [title]="title"></ngx-widget-header>
     </ng-template>
-    <ng-template>
-        <p #body>{{ numberText }}</p>
+    <ng-template #body>
+        <ngx-widget-body
+            [mainBodyContent]="numberText"
+            [subBodyContent]="subBodyContent">
+        </ngx-widget-body>
     </ng-template>
 </ngx-widget-container>

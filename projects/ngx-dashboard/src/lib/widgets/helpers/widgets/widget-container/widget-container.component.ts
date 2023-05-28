@@ -12,7 +12,7 @@ import {
     changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export class WidgetContainerComponent {
-    @ContentChild('header') header?: TemplateRef<any> | undefined;
-    @ContentChild('body') body?: TemplateRef<any> | undefined;
-    @ContentChild('footer') footer?: TemplateRef<any> | undefined;
+    @ContentChild('header') header?: TemplateRef<unknown> | undefined;
+    @ContentChild('body') body?: TemplateRef<unknown> | undefined;
+    @ContentChild('footer') footer?: TemplateRef<unknown> | undefined;
 }

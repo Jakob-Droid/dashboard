@@ -1,0 +1,18 @@
+.widget-container {
+    height: 100%;
+    display: grid;
+    grid-template-rows: min-content 5fr 1fr;
+    row-gap: 0.3em;
+}
+
+.default-header {
+    text-align: center;
+}
+
+.default-body {
+    padding-inline: 0.6em;
+}
+
+.default-footer {
+    text-align: center;
+}

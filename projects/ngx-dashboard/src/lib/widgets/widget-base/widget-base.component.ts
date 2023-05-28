@@ -1,8 +1,23 @@
-import { ChangeDetectionStrategy, Component } from '@angular/core';
+import { Observable } from 'rxjs';
+
+import {
+    ChangeDetectionStrategy,
+    Component,
+    inject,
+    Input,
+} from '@angular/core';
+
+import { WidgetOptionsBase } from '../models/widget-options-base.model';
+import { WidgetPinningService } from './services/widget-pinning.service';
 
 @Component({
-    selector: '',
     template: '',
     changeDetection: ChangeDetectionStrategy.OnPush,
 })
-export class WidgetBaseComponent {}
+export class WidgetBaseComponent {
+    @Input() widgetOptions!: WidgetOptionsBase;
+
+    private isPinnedService = inject(WidgetPinningService);
+
+    isPinned$: Observable<boolean | null> = this.isPinnedService.isPinned$;
+}

@@ -5,5 +5,12 @@
     --h4-size: 1.3rem;
     --h5-size: 1.1rem;
 
-    --font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+    --font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+@mixin truncate($linenumber: 3) {
+    display: -webkit-box;
+    -webkit-line-clamp: $linenumber;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
 }

@@ -9,7 +9,11 @@ import { NumberWidgetInputs } from './models/number-widget-inputs.model';
     styleUrls: ['./number-widget.component.scss'],
     changeDetection: ChangeDetectionStrategy.OnPush,
 })
-export class NumberWidgetComponent extends WidgetBaseComponent implements NumberWidgetInputs {
+export class NumberWidgetComponent
+    extends WidgetBaseComponent
+    implements NumberWidgetInputs
+{
     @Input() numberText!: string;
+    @Input() subBodyContent!: string;
     @Input() title!: string;
 }

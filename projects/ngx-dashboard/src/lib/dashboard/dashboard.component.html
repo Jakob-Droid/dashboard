@@ -2,14 +2,14 @@
     <gridster [options]="options">
         <gridster-item
             [item]="widgetOption.gridsterOptions"
-            *ngFor="let widgetOption of widgetOptions"
-        >
+            *ngFor="let widgetOption of widgetOptions">
             <ngx-widget-resolver
                 ngxTheme
                 [theme]="widgetOption.theme"
                 [widgetOptions]="widgetOption"
                 (themeChanged)="onThemeChanged($event)"
-            ></ngx-widget-resolver>
+                (pinnedChanged)="onPinnedChanged($event)">
+            </ngx-widget-resolver>
         </gridster-item>
     </gridster>
 </div>

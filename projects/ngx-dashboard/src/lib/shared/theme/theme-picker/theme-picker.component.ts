@@ -1,13 +1,14 @@
-import { CommonModule } from '@angular/common';
+import { map, Observable } from 'rxjs';
+
 import {
     ChangeDetectionStrategy,
     Component,
     EventEmitter,
+    OnInit,
     Output,
 } from '@angular/core';
 
 import { ThemeName } from './models/theme-names.model';
-import { Theme } from './models/theme.model';
 import { ThemeConfig } from './models/themes.config';
 import { ThemePickerNotifierService } from './theme-picker-notifier.service';
 
@@ -16,19 +17,25 @@ import { ThemePickerNotifierService } from './theme-picker-notifier.service';
     templateUrl: './theme-picker.component.html',
     styleUrls: ['./theme-picker.component.scss'],
     changeDetection: ChangeDetectionStrategy.OnPush,
-    standalone: true,
-    imports: [CommonModule],
 })
-export class ThemePickerComponent {
+export class ThemePickerComponent implements OnInit {
+    @Output() selectedTheme = new EventEmitter<ThemeName>();
+
     themes = ThemeConfig;
-    @Output() selectedTheme = new EventEmitter<Theme>();
+    currentTheme$!: Observable<ThemeName>;
 
     constructor(
-        private themePickerNotifierService: ThemePickerNotifierService
+        private themePickerNotifierService: ThemePickerNotifierService,
     ) {}
 
+    ngOnInit(): void {
+        this.currentTheme$ = this.themePickerNotifierService.themeChanged$.pipe(
+            map((theme) => theme ?? ThemeName.dark),
+        );
+    }
+
     onSelectTheme(selectedThemeKey: string) {
-        const selectedTheme = this.themes[selectedThemeKey as ThemeName];
+        const selectedTheme = selectedThemeKey as ThemeName;
 
         this.selectedTheme.emit(selectedTheme);
         this.themePickerNotifierService.newTheme(selectedTheme);

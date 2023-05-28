@@ -1,0 +1,35 @@
+@use 'styles';
+
+:host {
+    display: grid;
+    grid-template-columns: minmax(50px, min-content) 1fr min-content;
+    justify-content: center;
+    padding-top: 0.5em;
+    column-gap: 0.5em;
+}
+
+.header-title {
+    font-size: var(--h1-size);
+    font-family: var(--font-family);
+    @include styles.truncate($linenumber: 1);
+    cursor: default;
+
+    justify-self: center;
+    align-self: center;
+    height: 1em;
+
+    &::selection {
+        color: inherit;
+        background-color: transparent;
+    }
+
+    &.pinned {
+        cursor: grab;
+    }
+}
+
+.header-pinned {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
