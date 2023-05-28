@@ -1,0 +1,22 @@
+:host {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    row-gap: 5cqi;
+}
+
+.main-text {
+    font-size: 30cqmin;
+    line-height: 30cqmin;
+    font-weight: 600;
+    margin: 0;
+}
+
+.sub-text {
+    font-size: 10cqmin;
+    line-height: 10cqmin;
+    text-align: center;
+    font-weight: 300;
+    margin: 0;
+}

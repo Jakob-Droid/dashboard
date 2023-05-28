@@ -5,6 +5,9 @@
             [title]="title"></ngx-widget-header>
     </ng-template>
     <ng-template #body>
-        <p>{{ numberText }}</p>
+        <ngx-widget-body
+            [mainBodyContent]="numberText"
+            [subBodyContent]="subBodyContent">
+        </ngx-widget-body>
     </ng-template>
 </ngx-widget-container>

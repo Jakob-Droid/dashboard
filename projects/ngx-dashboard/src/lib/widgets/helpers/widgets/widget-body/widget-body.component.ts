@@ -1,4 +1,4 @@
-import { ChangeDetectionStrategy, Component } from '@angular/core';
+import { ChangeDetectionStrategy, Component, Input } from '@angular/core';
 
 @Component({
     selector: 'ngx-widget-body',
@@ -6,4 +6,7 @@ import { ChangeDetectionStrategy, Component } from '@angular/core';
     styleUrls: ['./widget-body.component.scss'],
     changeDetection: ChangeDetectionStrategy.OnPush,
 })
-export class WidgetBodyComponent {}
+export class WidgetBodyComponent {
+    @Input() mainBodyContent!: string;
+    @Input() subBodyContent!: string;
+}

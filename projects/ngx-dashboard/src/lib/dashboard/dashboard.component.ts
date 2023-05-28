@@ -84,7 +84,8 @@ export class DashboardComponent implements OnInit {
             return;
         }
 
-        changedWidgetPinned.gridsterOptions.dragEnabled = pinnedWidget.isPinned;
+        changedWidgetPinned.gridsterOptions.dragEnabled =
+            !pinnedWidget.isPinned;
 
         this.updateWidgetList(pinnedWidget.widgetId, changedWidgetPinned);
 

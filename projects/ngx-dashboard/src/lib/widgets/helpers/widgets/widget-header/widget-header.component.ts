@@ -8,5 +8,5 @@ import { ChangeDetectionStrategy, Component, Input } from '@angular/core';
 })
 export class WidgetHeaderComponent {
     @Input() title = '';
-    @Input() isPinned: boolean | null = true;
+    @Input() isPinned: boolean | null = false;
 }

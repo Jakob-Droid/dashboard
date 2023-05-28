@@ -1,10 +1,12 @@
-import { Subject } from 'rxjs';
+import { ReplaySubject } from 'rxjs';
 
 import { Injectable } from '@angular/core';
 
 @Injectable()
 export class WidgetPinningService {
-    private _isPinned = new Subject<boolean>();
+    startValue = false;
+
+    private _isPinned = new ReplaySubject<boolean>(1);
     isPinned$ = this._isPinned.asObservable();
 
     setPinned(isPinned: boolean) {

@@ -1,3 +1,4 @@
+import { ThemeName } from 'projects/ngx-dashboard/src/lib/shared/theme/theme-picker/models/theme-names.model';
 import { WidgetOptionsBase } from 'projects/ngx-dashboard/src/lib/widgets/models/widget-options-base.model';
 import { NumberWidgetInputs } from 'projects/ngx-dashboard/src/lib/widgets/number-widget/models/number-widget-inputs.model';
 import { NumberWidgetComponent } from 'projects/ngx-dashboard/src/lib/widgets/number-widget/number-widget.component';
@@ -25,20 +26,34 @@ export class AppComponent {
             inputs: {
                 numberText: '42',
                 title: 'Solumn Plexus',
+                subBodyContent: 'Citizens in welfare',
             } as NumberWidgetInputs,
+            theme: ThemeName.orangy,
             type: NumberWidgetComponent,
         },
         {
-            gridsterOptions: { cols: 1, rows: 1, y: 1, x: 1 },
+            gridsterOptions: {
+                cols: 1,
+                rows: 1,
+                y: 1,
+                x: 1,
+            },
             id: '12345678',
             inputs: {
                 numberText: '45',
                 title: 'some other title',
+                subBodyContent: 'Citizens without welfare',
             } as NumberWidgetInputs,
             type: NumberWidgetComponent,
         },
         {
-            gridsterOptions: { cols: 1, rows: 1, y: 2, x: 2 },
+            gridsterOptions: {
+                cols: 1,
+                rows: 1,
+                y: 2,
+                x: 2,
+                dragEnabled: true,
+            },
             id: '12345678142548',
             inputs: {},
             type: NewWidgetTypeComponent,

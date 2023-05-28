@@ -1,4 +1,4 @@
-import { map, Subject, takeUntil } from 'rxjs';
+import { map, skip, Subject, takeUntil } from 'rxjs';
 
 import {
     ChangeDetectionStrategy,
@@ -11,6 +11,7 @@ import {
     ViewContainerRef,
 } from '@angular/core';
 
+import { ThemeName } from '../../../shared/theme/theme-picker/models/theme-names.model';
 import { ThemePickerNotifierService } from '../../../shared/theme/theme-picker/theme-picker-notifier.service';
 import { WidgetOptionsBase } from '../../../widgets/models/widget-options-base.model';
 import { WidgetPinningService } from '../../../widgets/widget-base/services/widget-pinning.service';
@@ -43,6 +44,20 @@ export class WidgetResolverComponent implements OnInit {
         this.createWidgets();
         this.themeChangedSubscription();
         this.pinnedChangedSubscription();
+        this.setPinnedStartValue();
+        this.setThemeStartValue();
+    }
+
+    private setThemeStartValue() {
+        const selectedTheme = this.widgetOptions.theme ?? ThemeName.dark;
+
+        this.themePickerNotiferService.newTheme(selectedTheme);
+    }
+
+    private setPinnedStartValue() {
+        const isPinned =
+            this.widgetOptions.gridsterOptions.dragEnabled === false;
+        this.widgetPinningService.setPinned(isPinned);
     }
 
     private createWidgets() {
@@ -60,6 +75,7 @@ export class WidgetResolverComponent implements OnInit {
     private themeChangedSubscription() {
         this.themePickerNotiferService.themeChanged$
             .pipe(
+                skip(1),
                 map(
                     (theme) =>
                         ({
@@ -77,6 +93,7 @@ export class WidgetResolverComponent implements OnInit {
     private pinnedChangedSubscription() {
         this.widgetPinningService.isPinned$
             .pipe(
+                skip(1),
                 map(
                     (isPinned) =>
                         ({

@@ -14,5 +14,6 @@ export class NumberWidgetComponent
     implements NumberWidgetInputs
 {
     @Input() numberText!: string;
+    @Input() subBodyContent!: string;
     @Input() title!: string;
 }

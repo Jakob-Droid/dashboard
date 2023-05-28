@@ -1,6 +1,6 @@
-import { Theme } from '../../../../shared/theme/theme-picker/models/theme.model';
+import { ThemeName } from 'dist/ngx-dashboard/lib/shared/theme/theme-picker/models/theme-names.model';
 
 export type ThemeChanged = {
-    theme: Theme;
+    theme: ThemeName;
     widgetId: string;
 };

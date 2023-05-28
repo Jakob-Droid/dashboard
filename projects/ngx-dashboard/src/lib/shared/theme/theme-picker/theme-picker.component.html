@@ -2,8 +2,13 @@
     #themeSelector
     name="theme"
     id="theme"
-    (change)="onSelectTheme(themeSelector.value)">
-    <option default>- select theme -</option>
+    (change)="onSelectTheme(themeSelector.value)"
+    [ngModel]="currentTheme$ | async">
+    <option
+        disabled
+        selected>
+        - select theme -
+    </option>
     <option
         *ngFor="let theme of themes | keyvalue"
         [value]="theme.key">
