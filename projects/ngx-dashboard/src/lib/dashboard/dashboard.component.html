@@ -7,7 +7,9 @@
                 ngxTheme
                 [theme]="widgetOption.theme"
                 [widgetOptions]="widgetOption"
-                (themeChanged)="onThemeChanged($event)"></ngx-widget-resolver>
+                (themeChanged)="onThemeChanged($event)"
+                (pinnedChanged)="onPinnedChanged($event)">
+            </ngx-widget-resolver>
         </gridster-item>
     </gridster>
 </div>

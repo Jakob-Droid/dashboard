@@ -7,3 +7,10 @@
 
     --font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
+
+@mixin truncate($linenumber: 3) {
+    display: -webkit-box;
+    -webkit-line-clamp: $linenumber;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+}

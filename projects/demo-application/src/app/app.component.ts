@@ -14,7 +14,13 @@ import { NewWidgetTypeComponent } from './new-widget-type/new-widget-type.compon
 export class AppComponent {
     widgets: WidgetOptionsBase[] = [
         {
-            gridsterOptions: { cols: 2, rows: 1, y: 0, x: 0 },
+            gridsterOptions: {
+                cols: 2,
+                rows: 1,
+                y: 0,
+                x: 0,
+                dragEnabled: false,
+            },
             id: '12345678910',
             inputs: {
                 numberText: '42',
