@@ -1,10 +1,4 @@
-import { CommonModule } from '@angular/common';
-import {
-    ChangeDetectionStrategy,
-    Component,
-    EventEmitter,
-    Output,
-} from '@angular/core';
+import { ChangeDetectionStrategy, Component, EventEmitter, Output } from '@angular/core';
 
 import { ThemeName } from './models/theme-names.model';
 import { Theme } from './models/theme.model';
@@ -16,16 +10,12 @@ import { ThemePickerNotifierService } from './theme-picker-notifier.service';
     templateUrl: './theme-picker.component.html',
     styleUrls: ['./theme-picker.component.scss'],
     changeDetection: ChangeDetectionStrategy.OnPush,
-    standalone: true,
-    imports: [CommonModule],
 })
 export class ThemePickerComponent {
     themes = ThemeConfig;
     @Output() selectedTheme = new EventEmitter<Theme>();
 
-    constructor(
-        private themePickerNotifierService: ThemePickerNotifierService
-    ) {}
+    constructor(private themePickerNotifierService: ThemePickerNotifierService) {}
 
     onSelectTheme(selectedThemeKey: string) {
         const selectedTheme = this.themes[selectedThemeKey as ThemeName];

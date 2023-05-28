@@ -24,14 +24,8 @@
                         "polyfills": ["zone.js"],
                         "tsConfig": "projects/demo-application/tsconfig.app.json",
                         "inlineStyleLanguage": "scss",
-                        "assets": [
-                            "projects/demo-application/src/favicon.ico",
-                            "projects/demo-application/src/assets"
-                        ],
-                        "styles": [
-                            "projects/demo-application/src/styles.scss",
-                            "dist/ngx-dashboard/assets/styles/styles.scss"
-                        ],
+                        "assets": ["projects/demo-application/src/favicon.ico", "projects/demo-application/src/assets"],
+                        "styles": ["projects/demo-application/src/styles.scss", "dist/ngx-dashboard/assets/styles/styles.scss"],
                         "scripts": []
                     },
                     "configurations": {
@@ -85,10 +79,7 @@
                         "polyfills": ["zone.js", "zone.js/testing"],
                         "tsConfig": "projects/demo-application/tsconfig.spec.json",
                         "inlineStyleLanguage": "scss",
-                        "assets": [
-                            "projects/demo-application/src/favicon.ico",
-                            "projects/demo-application/src/assets"
-                        ],
+                        "assets": ["projects/demo-application/src/favicon.ico", "projects/demo-application/src/assets"],
                         "styles": ["projects/demo-application/src/styles.scss"],
                         "scripts": []
                     }
