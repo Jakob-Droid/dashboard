@@ -1,6 +1,7 @@
 import { CommonModule } from '@angular/common';
 import { NgModule } from '@angular/core';
 
+import { ThemeModule } from '../../shared/theme/theme.module';
 import { WidgetBodyComponent } from '../helpers/widget-body/widget-body.component';
 import { WidgetContainerComponent } from '../helpers/widget-container/widget-container.component';
 import { WidgetFooterComponent } from '../helpers/widget-footer/widget-footer.component';
@@ -9,7 +10,7 @@ import { NumberWidgetComponent } from '../number-widget/number-widget.component'
 
 @NgModule({
     declarations: [NumberWidgetComponent, WidgetContainerComponent, WidgetHeaderComponent, WidgetFooterComponent, WidgetBodyComponent],
-    imports: [CommonModule],
+    imports: [CommonModule, ThemeModule],
     exports: [NumberWidgetComponent, WidgetContainerComponent, WidgetHeaderComponent, WidgetFooterComponent, WidgetBodyComponent],
 })
 export class WidgetModule {}

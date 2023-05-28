@@ -14,3 +14,4 @@ export * from './lib/widgets/helpers/widget-footer/widget-footer.component';
 export * from './lib/widgets/helpers/widget-header/widget-header.component';
 export * from './lib/widgets/widget-base/widget.module';
 export * from './lib/widgets/helpers/widget-container/widget-container.component';
+export * from './lib/widgets/number-widget/number-widget.component';
