@@ -30,13 +30,7 @@ export class ThemePickerComponent implements OnInit {
 
     ngOnInit(): void {
         this.currentTheme$ = this.themePickerNotifierService.themeChanged$.pipe(
-            map((theme) => {
-                console.log(theme);
-                if (!theme) {
-                    return ThemeName.dark;
-                }
-                return theme;
-            }),
+            map((theme) => theme ?? ThemeName.dark),
         );
     }
 
