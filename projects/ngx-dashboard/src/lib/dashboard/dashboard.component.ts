@@ -1,6 +1,11 @@
 import { GridsterConfig } from 'angular-gridster2';
 
-import { ChangeDetectionStrategy, Component, Input, OnInit } from '@angular/core';
+import {
+    ChangeDetectionStrategy,
+    Component,
+    Input,
+    OnInit,
+} from '@angular/core';
 
 import { WidgetOptionsBase } from '../widgets/models/widget-options-base.model';
 import { ThemeChanged } from './infrastructure/widget-resolver/theme-changed.model';
@@ -16,11 +21,11 @@ export class DashboardComponent implements OnInit {
 
     options!: GridsterConfig;
 
-    static itemChange(item: any, itemComponent: any) {
+    static itemChange(item: unknown, itemComponent: unknown) {
         console.info('itemChanged', item, itemComponent);
     }
 
-    static itemResize(item: any, itemComponent: any) {
+    static itemResize(item: unknown, itemComponent: unknown) {
         console.info('itemResized', item, itemComponent);
     }
 
@@ -60,13 +65,19 @@ export class DashboardComponent implements OnInit {
     }
 
     changedOptions() {
-        if (!!this.options && !!this.options.api && !!this.options.api.optionsChanged) {
+        if (
+            !!this.options &&
+            !!this.options.api &&
+            !!this.options.api.optionsChanged
+        ) {
             this.options.api.optionsChanged();
         }
     }
 
     onThemeChanged(selectedTheme: ThemeChanged) {
-        const changedWidgetTheme = this.widgetOptions.find((widget) => widget.id === selectedTheme.widgetId);
+        const changedWidgetTheme = this.widgetOptions.find(
+            (widget) => widget.id === selectedTheme.widgetId,
+        );
 
         if (!changedWidgetTheme) {
             return;
@@ -74,6 +85,11 @@ export class DashboardComponent implements OnInit {
 
         changedWidgetTheme.theme = selectedTheme.theme;
 
-        this.widgetOptions = [...this.widgetOptions.filter((widget) => widget.id !== selectedTheme.widgetId), changedWidgetTheme];
+        this.widgetOptions = [
+            ...this.widgetOptions.filter(
+                (widget) => widget.id !== selectedTheme.widgetId,
+            ),
+            changedWidgetTheme,
+        ];
     }
 }

@@ -7,5 +7,5 @@ import { ChangeDetectionStrategy, Component, Input } from '@angular/core';
     changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export class WidgetHeaderComponent {
-    @Input() title: string = '';
+    @Input() title = '';
 }

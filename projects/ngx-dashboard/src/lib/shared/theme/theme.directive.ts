@@ -24,9 +24,9 @@ export class ThemeDirective {
             ([key, value]: [string, string]) => {
                 this.elementRef.nativeElement.style.setProperty(
                     `--${key}`,
-                    value
+                    value,
                 );
-            }
+            },
         );
     }
 }

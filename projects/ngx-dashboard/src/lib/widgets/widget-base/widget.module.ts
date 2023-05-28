@@ -9,8 +9,20 @@ import { WidgetHeaderComponent } from '../helpers/widget-header/widget-header.co
 import { NumberWidgetComponent } from '../number-widget/number-widget.component';
 
 @NgModule({
-    declarations: [NumberWidgetComponent, WidgetContainerComponent, WidgetHeaderComponent, WidgetFooterComponent, WidgetBodyComponent],
+    declarations: [
+        NumberWidgetComponent,
+        WidgetContainerComponent,
+        WidgetHeaderComponent,
+        WidgetFooterComponent,
+        WidgetBodyComponent,
+    ],
     imports: [CommonModule, ThemeModule],
-    exports: [NumberWidgetComponent, WidgetContainerComponent, WidgetHeaderComponent, WidgetFooterComponent, WidgetBodyComponent],
+    exports: [
+        NumberWidgetComponent,
+        WidgetContainerComponent,
+        WidgetHeaderComponent,
+        WidgetFooterComponent,
+        WidgetBodyComponent,
+    ],
 })
 export class WidgetModule {}

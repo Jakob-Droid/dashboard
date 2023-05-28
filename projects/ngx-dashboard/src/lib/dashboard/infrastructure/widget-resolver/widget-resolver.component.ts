@@ -32,7 +32,7 @@ export class WidgetResolverComponent implements OnInit {
     private destroy = new Subject<void>();
 
     constructor(
-        private themePickerNotiferService: ThemePickerNotifierService
+        private themePickerNotiferService: ThemePickerNotifierService,
     ) {}
 
     ngOnInit(): void {
@@ -44,24 +44,24 @@ export class WidgetResolverComponent implements OnInit {
                         ({
                             theme: theme,
                             widgetId: this.widgetOptions.id,
-                        } as ThemeChanged)
+                        } as ThemeChanged),
                 ),
-                takeUntil(this.destroy)
+                takeUntil(this.destroy),
             )
             .subscribe((widgetIdWithTheme) =>
-                this.themeChanged.emit(widgetIdWithTheme)
+                this.themeChanged.emit(widgetIdWithTheme),
             );
     }
 
     private createWidgets() {
         const widgetComponentRef = this.widgetViewContainerRef.createComponent(
-            this.widgetOptions.type
+            this.widgetOptions.type,
         );
 
         Object.entries(this.widgetOptions.inputs).forEach(
             ([key, value]: [string, unknown]) => {
                 widgetComponentRef.setInput(key, value);
-            }
+            },
         );
     }
 }
