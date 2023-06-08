@@ -12,7 +12,10 @@
         "noFallthroughCasesInSwitch": true,
         "sourceMap": true,
         "paths": {
-            "ngx-dashboard": ["dist/ngx-dashboard"]
+            "@ngx-dashboard": [
+                "./dist/ngx-dashboard",
+                "./dist/ngx-dashboard/lib"
+            ]
         },
         "declaration": false,
         "downlevelIteration": true,

@@ -1,9 +1,10 @@
-import { ThemeName } from 'projects/ngx-dashboard/src/lib/shared/theme/theme-picker/models/theme-names.model';
-import { WidgetOptionsBase } from 'projects/ngx-dashboard/src/lib/widgets/models/widget-options-base.model';
-import { NumberWidgetInputs } from 'projects/ngx-dashboard/src/lib/widgets/number-widget/models/number-widget-inputs.model';
-import { NumberWidgetComponent } from 'projects/ngx-dashboard/src/lib/widgets/number-widget/number-widget.component';
-
 import { Component } from '@angular/core';
+import {
+    NumberWidgetComponent,
+    NumberWidgetInputs,
+    ThemeName,
+    WidgetOptionsBase,
+} from '@ngx-dashboard';
 
 import { NewWidgetTypeComponent } from './new-widget-type/new-widget-type.component';
 

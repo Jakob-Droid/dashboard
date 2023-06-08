@@ -1,6 +1,11 @@
 {
     "name": "ngx-dashboard",
     "version": "0.0.1",
+    "exports": {
+        "./theming": {
+            "style": "./src/styles/_index.scss"
+        }
+    },
     "peerDependencies": {
         "@angular/common": "^16.0.0",
         "@angular/core": "^16.0.0",

@@ -1,6 +1,5 @@
-import { WidgetBaseComponent } from 'projects/ngx-dashboard/src/lib/widgets/widget-base/widget-base.component';
-
 import { ChangeDetectionStrategy, Component } from '@angular/core';
+import { WidgetBaseComponent } from '@ngx-dashboard';
 
 @Component({
     selector: 'app-new-widget-type',
