@@ -1,4 +1,4 @@
-import { ThemeName } from 'dist/ngx-dashboard/lib/shared/theme/theme-picker/models/theme-names.model';
+import { ThemeName } from 'projects/ngx-dashboard/src/lib/shared/theme/theme-picker/models/theme-names.model';
 
 export type ThemeChanged = {
     theme: ThemeName;

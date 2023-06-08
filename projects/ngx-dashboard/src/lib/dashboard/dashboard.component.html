@@ -1,5 +1,7 @@
 <div class="dashboard-container">
-    <gridster [options]="options">
+    <gridster
+        class="dashboard"
+        [options]="options">
         <gridster-item
             [item]="widgetOption.gridsterOptions"
             *ngFor="let widgetOption of widgetOptions">

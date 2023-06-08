@@ -2,7 +2,8 @@
     "$schema": "../../node_modules/ng-packagr/ng-package.schema.json",
     "dest": "../../dist/ngx-dashboard",
     "lib": {
-        "entryFile": "src/public-api.ts"
+        "entryFile": "src/public-api.ts",
+        "styleIncludePaths": ["src/styles", "src/styles/typography"]
     },
-    "assets": ["./assets"]
+    "assets": ["./assets/**/*", "src/styles"]
 }

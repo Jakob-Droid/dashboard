@@ -1,6 +1,8 @@
-@use 'styles';
-
 .dashboard-container {
     height: 100%;
     width: 100%;
+}
+
+.dashboard {
+    background-color: var(--dashboard-background-color);
 }

@@ -1,9 +1,7 @@
-import { ThemeModule } from 'ngx-dashboard';
-import { NgxDashboardModule } from 'projects/ngx-dashboard/src/public-api';
-
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { NgxDashboardModule, ThemeModule } from '@ngx-dashboard';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
