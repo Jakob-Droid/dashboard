@@ -1,4 +1,3 @@
-import { NgxDashboardModule, ThemeModule } from 'ngx-dashboard';
 import { NgxRichyModule } from 'ngx-richy';
 
 import { NgModule } from '@angular/core';
