@@ -1,0 +1,72 @@
+<div class="rich-text-container">
+    <header class="rich-text-header">
+        <ul
+            role="action-group"
+            class="rich-text-header-group">
+            <li class="list-item"> <mat-icon>undo</mat-icon></li>
+            <li class="list-item"><mat-icon>redo</mat-icon></li>
+            <li class="list-item"><mat-icon>print</mat-icon></li>
+        </ul>
+        <ul
+            role="text-formatting"
+            class="rich-text-header-group">
+            <li class="list-item"><mat-icon>format_bold</mat-icon></li>
+            <li class="list-item"><mat-icon>format_italic</mat-icon></li>
+            <li class="list-item"><mat-icon>format_underline</mat-icon></li>
+            <li class="list-item"><mat-icon>strikethrough_s</mat-icon></li>
+            <li class="list-item"><mat-icon>superscript</mat-icon></li>
+            <li class="list-item"><mat-icon>subscript</mat-icon></li>
+            <li class="list-item"><mat-icon>format_clear</mat-icon></li>
+        </ul>
+        <ul
+            role="font-style"
+            class="rich-text-header-group">
+            <li
+                ><ry-header-selector
+                    [headers]="['header 1', 'header 2']"></ry-header-selector
+            ></li>
+            <li
+                ><ry-font-selector
+                    [defaultFont]="'Roboto'"
+                    [fonts]="['Arial', 'Times New Roman']">
+                </ry-font-selector
+            ></li>
+            <li><ry-font-size-selector></ry-font-size-selector></li>
+        </ul>
+        <ul
+            role="coloring"
+            class="rich-text-header-group">
+            <li class="list-item"><mat-icon>format_color_text</mat-icon></li>
+            <li class="list-item"><mat-icon>format_color_fill</mat-icon></li>
+        </ul>
+        <ul
+            role="insert"
+            class="rich-text-header-group">
+            <li class="list-item"><mat-icon>image</mat-icon></li>
+            <li class="list-item"><mat-icon>add_link</mat-icon></li>
+            <li class="list-item"><mat-icon>table_chart</mat-icon></li>
+        </ul>
+        <ul
+            role="text-layout"
+            class="rich-text-header-group">
+            <li class="list-item"><mat-icon>format_align_left</mat-icon></li>
+            <li class="list-item"><mat-icon>format_align_center</mat-icon></li>
+            <li class="list-item"><mat-icon>format_align_right</mat-icon></li>
+            <li class="list-item"><mat-icon>format_align_justify</mat-icon></li>
+            <li class="list-item"
+                ><mat-icon>format_indent_increase</mat-icon></li
+            >
+            <li class="list-item"
+                ><mat-icon>format_indent_decrease</mat-icon></li
+            >
+            <li class="list-item"><mat-icon>format_line_spacing</mat-icon></li>
+        </ul>
+        <ul
+            role="lists"
+            class="rich-text-header-group">
+            <li class="list-item"><mat-icon>format_list_numbered</mat-icon></li>
+            <li class="list-item"><mat-icon>format_list_bulleted</mat-icon></li>
+            <li class="list-item"><mat-icon>checklist</mat-icon></li>
+        </ul>
+    </header>
+</div>

@@ -1,0 +1,21 @@
+<div>
+    <div class="font-size-selector-container">
+        <button
+            class="font-size-button minus"
+            (click)="onMinusButtonClicked()">
+            <mat-icon>remove</mat-icon>
+        </button>
+        <div class="text-container">
+            <input
+                [(ngModel)]="currentFontSize"
+                class="text-box"
+                type="text"
+                (change)="addPixelSuffix($event)" />
+        </div>
+        <button
+            class="font-size-button plus"
+            (click)="onAddButtonClicked()">
+            <mat-icon>add</mat-icon>
+        </button>
+    </div>
+</div>

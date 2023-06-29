@@ -1,0 +1,10 @@
+<select
+    name="font-selector"
+    class="font-selector">
+    <option [value]="defaultFont">{{ defaultFont }}</option>
+    <option
+        *ngFor="let font of fonts"
+        [value]="font"
+        >{{ font }}
+    </option>
+</select>

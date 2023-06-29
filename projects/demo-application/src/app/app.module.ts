@@ -1,6 +1,5 @@
-import { ThemeModule } from 'ngx-dashboard';
+import { NgxDashboardModule, ThemeModule } from 'ngx-dashboard';
 import { NgxRichyModule } from 'ngx-richy';
-import { NgxDashboardModule } from 'projects/ngx-dashboard/src/public-api';
 
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';

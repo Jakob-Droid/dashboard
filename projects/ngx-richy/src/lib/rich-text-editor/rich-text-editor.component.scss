@@ -1,0 +1,35 @@
+.rich-text-container {
+    margin: 20px;
+    padding: 10px;
+    display: grid;
+    align-items: center;
+    background-color: var(--main-background-color);
+    color: var(--text-color);
+}
+
+.rich-text-header {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 0.625rem;
+    list-style: none;
+}
+
+.rich-text-header-group {
+    display: flex;
+    align-items: center;
+    list-style: inherit;
+    gap: 0.3125rem;
+}
+
+.d-inline {
+    display: inline;
+}
+
+.no-margin {
+}
+
+.list-item {
+    height: 25px;
+    width: 25px;
+}

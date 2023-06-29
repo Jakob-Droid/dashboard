@@ -1,0 +1,9 @@
+<select
+    name="header-selector"
+    class="header-selector">
+    <option
+        *ngFor="let header of headers"
+        [value]="header"
+        >{{ header }}
+    </option>
+</select>
