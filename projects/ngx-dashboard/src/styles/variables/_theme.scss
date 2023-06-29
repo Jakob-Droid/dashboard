@@ -1,4 +1,6 @@
 :root {
+    --dashboard-background-color: #fff;
+
     --h1-size: 3rem;
     --h2-size: 2rem;
     --h3-size: 1.5rem;
@@ -6,11 +8,4 @@
     --h5-size: 1.1rem;
 
     --font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-}
-
-@mixin truncate($linenumber: 3) {
-    display: -webkit-box;
-    -webkit-line-clamp: $linenumber;
-    -webkit-box-orient: vertical;
-    overflow: hidden;
 }

@@ -1,4 +1,4 @@
-@use 'styles';
+@use 'typography';
 
 :host {
     display: grid;
@@ -11,8 +11,8 @@
 .header-title {
     font-size: var(--h1-size);
     font-family: var(--font-family);
-    @include styles.truncate($linenumber: 1);
-    cursor: default;
+    @include typography.truncate($linenumber: 1);
+    cursor: grab;
 
     justify-self: center;
     align-self: center;
@@ -24,7 +24,7 @@
     }
 
     &.pinned {
-        cursor: grab;
+        cursor: default;
     }
 }
 

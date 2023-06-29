@@ -1,4 +1,10 @@
 import { Component } from '@angular/core';
+import {
+    NumberWidgetComponent,
+    NumberWidgetInputs,
+    ThemeName,
+    WidgetOptionsBase,
+} from '@ngx-dashboard';
 
 @Component({
     selector: 'app-root',

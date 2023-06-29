@@ -30,7 +30,7 @@
                         ],
                         "styles": [
                             "@angular/material/prebuilt-themes/indigo-pink.css",
-                            "dist/ngx-dashboard/assets/styles/styles.scss",
+                            "./projects/ngx-dashboard/src/styles/_index.scss",
                             "./projects/ngx-richy/src/styles/styles.scss",
                             "projects/demo-application/src/styles.scss"
                         ],
