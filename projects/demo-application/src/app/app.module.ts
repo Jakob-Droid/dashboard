@@ -1,4 +1,5 @@
 import { ThemeModule } from 'ngx-dashboard';
+import { NgxRichyModule } from 'ngx-richy';
 import { NgxDashboardModule } from 'projects/ngx-dashboard/src/public-api';
 
 import { NgModule } from '@angular/core';
@@ -7,14 +8,22 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { NewWidgetTypeComponent } from './new-widget-type/new-widget-type.component';
+import { DashboardShowcaseComponent } from './dashboard-showcase/dashboard-showcase.component';
+import { NewWidgetTypeComponent } from './dashboard-showcase/new-widget-type/new-widget-type.component';
+import { RichTextEditorShowcaseComponent } from './rich-text-editor-showcase/rich-text-editor-showcase.component';
 
 @NgModule({
-    declarations: [AppComponent, NewWidgetTypeComponent],
+    declarations: [
+        AppComponent,
+        NewWidgetTypeComponent,
+        RichTextEditorShowcaseComponent,
+        DashboardShowcaseComponent,
+    ],
     imports: [
         BrowserModule,
         AppRoutingModule,
         NgxDashboardModule,
+        NgxRichyModule,
         ThemeModule,
         BrowserAnimationsModule,
     ],

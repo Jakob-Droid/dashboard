@@ -13,6 +13,13 @@
         "sourceMap": true,
         "paths": {
             "ngx-dashboard": ["dist/ngx-dashboard"]
+            "@ngx-dashboard": [
+                "./dist/ngx-dashboard",
+                "./dist/ngx-dashboard/lib"
+            ],
+            "ngx-richy": [
+              "dist/ngx-richy"
+            ]
         },
         "declaration": false,
         "downlevelIteration": true,
